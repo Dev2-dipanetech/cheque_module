@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{bank_name}-Cheque Book--{cheque_book_number}-{###}",
+ "creation": "2023-01-13 12:46:50.597097",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bank_id",
+  "bank_name",
+  "bank_account",
+  "cheque_book_number",
+  "cheque_number_from",
+  "cheque_number_to",
+  "no_of_leaves"
+ ],
+ "fields": [
+  {
+   "fieldname": "cheque_book_number",
+   "fieldtype": "Data",
+   "label": "Cheque Book Number"
+  },
+  {
+   "fieldname": "cheque_number_from",
+   "fieldtype": "Data",
+   "label": "Cheque Number From"
+  },
+  {
+   "fieldname": "cheque_number_to",
+   "fieldtype": "Data",
+   "label": "Cheque Number To"
+  },
+  {
+   "fieldname": "no_of_leaves",
+   "fieldtype": "Data",
+   "label": "No of leaves",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "bank_id.bank",
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "bank_id.bank_account_no",
+   "fieldname": "bank_account",
+   "fieldtype": "Data",
+   "label": "Bank Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bank_id",
+   "fieldtype": "Link",
+   "label": "Bank ID",
+   "options": "Bank Account"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-13 14:05:06.631088",
+ "modified_by": "Administrator",
+ "module": "Cheque",
+ "name": "Cheque Book",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
